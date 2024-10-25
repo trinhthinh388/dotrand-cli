@@ -14,7 +14,6 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   Release:
     name: 🚀 Release
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     environment: Release
     steps:

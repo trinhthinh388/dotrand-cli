@@ -1,6 +1,6 @@
 {
   "name": "dotrand-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A CLI tool to generate fake with realistic looking data",
   "main": "index.js",
   "repository": "git@github.com:trinhthinh388/dotrand-cli.git",
@@ -14,6 +14,9 @@
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "dev:phone": "./bin/dev.js phone",
+    "dev:info": "./bin/dev.js info",
+    "phone": "./bin/run.js phone",
+    "iinfo": "./bin/run.js info",
     "changeset": "changeset",
     "versionp": "changeset version",
     "release": "yarn build && changeset publish"
@@ -27,7 +30,7 @@
   },
   "bin": "./bin/run.js",
   "oclif": {
-    "bin": "dotrand-cli",
+    "bin": "dotrand",
     "commands": "./dist/commands",
     "dirname": "dotrand-cli",
     "topicSeparator": " ",

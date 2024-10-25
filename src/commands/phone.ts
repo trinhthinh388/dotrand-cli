@@ -12,6 +12,8 @@ export default class Phone extends Command {
 
   static override examples = [
     '<%= config.bin %> <%= command.id %> <country code>',
+    '<%= config.bin %> <%= command.id %> AU',
+    '<%= config.bin %> <%= command.id %> vn',
   ];
 
   static strict = false;
@@ -39,21 +41,22 @@ export default class Phone extends Command {
     const { argv } = await this.parse(Phone);
 
     if (!argv || argv.length === 0) {
-      this.log(
-        ux.colorize(this.config.theme?.flagRequired, '[ERROR]'),
-        'Required at least one country code'
-      );
+      this.error('🛑 Required at least one country code', {
+        exit: 1,
+      });
     }
 
     const countries = (argv as string[]).map((c) => c.toUpperCase());
 
     if (!this.checkSupportedCountries(countries[0])) {
-      this.log(
-        ux.colorize(this.config.theme?.flagRequired, '[ERROR]'),
-        `Country with country code ${ux.colorize(
+      this.error(
+        `🛑 Country with country code ${ux.colorize(
           this.config.theme?.json?.key,
           countries[0]
-        )} is not supported.`
+        )} is not supported.`,
+        {
+          exit: 1,
+        }
       );
     }
 

@@ -1,5 +1,11 @@
 # dotrand-cli
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated binary command
+
 ## 0.0.2
 
 ### Patch Changes

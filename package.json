@@ -8,6 +8,9 @@
   "license": "MIT",
   "packageManager": "yarn@4.5.1",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "dev:phone": "./bin/dev.js phone",

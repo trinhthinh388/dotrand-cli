@@ -53,5 +53,8 @@
     "/assets",
     "/oclif.manifest.json",
     "/dist"
-  ]
+  ],
+  "engines": {
+    "node": "~16.20.0"
+  }
 }

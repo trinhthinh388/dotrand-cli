@@ -685,6 +685,7 @@ __metadata:
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.6.3"
   bin:
+    dotrand: ./bin/run.js
     dotrand-cli: ./bin/run.js
   languageName: unknown
   linkType: soft

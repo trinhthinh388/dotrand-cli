@@ -17,7 +17,5 @@
 
 <!-- commands -->
 
-# Commands
-
 - `dotrand phone` - Generate a random phone number
 <!-- commandsstop -->
